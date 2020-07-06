@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="fun.ticsmyc.mapper.StatisticsMapper">
+
+    <insert id="addStatistics" >
+        INSERT INTO
+        statistics (id,createTime,modifyTime,infectSource,passWay,imgUrl,dailyPic,summary,deleted,countRemark,virus,
+        remark1,remark2,remark3,remark4,remark5,generalRemark,confirmedCount,suspectedCount,curedCount,deadCount,seriousCount,
+                    suspectedIncr,confirmedIncr,curedIncr,deadIncr,seriousIncr,currentConfirmedCount,currentConfirmedIncr)
+        VALUES
+        (#{id} ,#{createTime}, #{modifyTime}, #{infectSource}, #{passWay}, #{imgUrl}, #{dailyPic}, #{summary},
+         #{deleted}, #{countRemark}, #{virus}, #{remark1}, #{remark2}, #{remark3}, #{remark4}, #{remark5},#{generalRemark},
+         #{confirmedCount},#{suspectedCount},#{curedCount},#{deadCount},#{seriousCount},#{suspectedIncr},#{confirmedIncr},
+         #{curedIncr},#{deadIncr},#{seriousIncr},#{currentConfirmedCount},#{currentConfirmedIncr});
+    </insert>
+
+    <select id="selectStatistics" resultType="Statistics">
+        select * from statistics ORDER BY modifyTime DESC limit 1
+    </select>
+</mapper>
