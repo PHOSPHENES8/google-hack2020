@@ -6,4 +6,4 @@ UI界面设计如下：
 
 用到的python包：chatterbot，chatterbot-corpus，en
 
-在training-data中可以自己手动添加聊天内容（即固定聊天的输入输出，当输入固定问题时，chatbot会输出对应回答，在演示的时候万一某些问题的回答不够好用时，可以利用这个装的智能一点（bushi））
+在training-data中可以自己手动添加聊天内容（即固定聊天的输入输出，当输入固定问题时，chatbot会输出对应回答）
